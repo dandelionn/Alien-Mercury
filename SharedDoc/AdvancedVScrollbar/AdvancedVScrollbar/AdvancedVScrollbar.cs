@@ -68,8 +68,8 @@ namespace AdvancedVScrollbar
             SetStyle(ControlStyles.DoubleBuffer, true);
 
 
-            UpArrow = ImageResource.uparrow;
-            DownArrow = ImageResource.downarrow;
+            UpArrow = ImageResource.uparrowblue;
+            DownArrow = ImageResource.downarrowblue;
 
 
             //_clickUpDistance = (int)(point.Y - _thumbTopPos - UpArrow.Height);
@@ -169,7 +169,7 @@ namespace AdvancedVScrollbar
             get { return _colorChannel; }
             set { _colorChannel = value; }
         }
-
+        
         [EditorBrowsable(EditorBrowsableState.Always), Browsable(true),
                            DefaultValue(false), Category("Skin"),
                            Description("Thumb Color")]
@@ -178,7 +178,7 @@ namespace AdvancedVScrollbar
             get { return _colorThumb; }
             set { _colorThumb = value; }
         }
-
+ 
         [EditorBrowsable(EditorBrowsableState.Always), Browsable(true),
                           DefaultValue(false), Category("Skin"),
                           Description("Channel Color")]

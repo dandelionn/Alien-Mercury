@@ -62,8 +62,8 @@ namespace AdvancedHScrollbar
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.DoubleBuffer, true);
 
-            LeftArrow = ImageResource.leftarrow;
-            RightArrow = ImageResource.rightarrow;
+            LeftArrow = ImageResource.leftarrowblue;
+            RightArrow = ImageResource.rightarrowblue;
         }
 
         [DllImport("User32.dll")]

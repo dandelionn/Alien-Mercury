@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ChatBox
 {
     public partial class ChatBox: UserControl
     {
-        public delegate int PostMessageExternal(string data);
+        Mutex mutex = new Mutex();
+
+        public delegate void PostMessageExternal(string data);
+
+        public Mutex GetMutex()
+        {
+            return mutex;
+        }
 
         public void SetMessageSender(PostMessageExternal function)
         {
@@ -26,7 +34,10 @@ namespace ChatBox
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            PostMessage();
+            PostMessageOut?.Invoke(editMessageBox.Text);
+            PostMessage(editMessageBox.Text);
+
+            editMessageBox.Text = String.Empty;
         }
 
         private void editMessageBox_KeyDown(object sender, KeyEventArgs e)
@@ -34,15 +45,23 @@ namespace ChatBox
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
-                PostMessage();
+
+                string chatBoxFlag = "<--ChatBox-->";
+
+                PostMessageOut?.Invoke(chatBoxFlag + editMessageBox.Text);
+                PostMessage(editMessageBox.Text);
+
+                editMessageBox.Text = String.Empty;
             }
         }
 
-        private void PostMessage()
+        public void PostMessage(string editedText)
         {
-            PostMessageOut?.Invoke(editMessageBox.Text);
+            //mutex.WaitOne();
 
-            _contentModifier.PostMessage();
+            _contentModifier.PostMessage(editedText);
+
+            //mutex.ReleaseMutex();
         }
     }
 }

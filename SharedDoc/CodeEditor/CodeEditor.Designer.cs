@@ -34,8 +34,8 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.advancedHScrollbar1 = new AdvancedHScrollbar.AdvancedHScrollbar();
             this.advancedVScrollbar1 = new AdvancedVScrollbar.AdvancedVScrollbar();
+            this.advancedHScrollbar1 = new AdvancedHScrollbar.AdvancedHScrollbar();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -59,7 +59,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -114,12 +114,34 @@
             this.textBox1.Size = new System.Drawing.Size(136, 24);
             this.textBox1.TabIndex = 5;
             // 
+            // advancedVScrollbar1
+            // 
+            this.advancedVScrollbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.advancedVScrollbar1.ChannelBorderColor = System.Drawing.Color.Empty;
+            this.advancedVScrollbar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
+            this.advancedVScrollbar1.DownArrow = ((System.Drawing.Image)(resources.GetObject("advancedVScrollbar1.DownArrow")));
+            this.advancedVScrollbar1.Location = new System.Drawing.Point(401, -1);
+            this.advancedVScrollbar1.Maximum = 0;
+            this.advancedVScrollbar1.Minimum = 0;
+            this.advancedVScrollbar1.Name = "advancedVScrollbar1";
+            this.advancedVScrollbar1.Size = new System.Drawing.Size(24, 312);
+            this.advancedVScrollbar1.TabIndex = 7;
+            this.advancedVScrollbar1.ThumbBottom = null;
+            this.advancedVScrollbar1.ThumbBottomSpan = null;
+            this.advancedVScrollbar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.advancedVScrollbar1.ThumbMiddle = null;
+            this.advancedVScrollbar1.ThumbPosition = 0;
+            this.advancedVScrollbar1.ThumbTop = null;
+            this.advancedVScrollbar1.ThumbTopSpan = null;
+            this.advancedVScrollbar1.UpArrow = ((System.Drawing.Image)(resources.GetObject("advancedVScrollbar1.UpArrow")));
+            // 
             // advancedHScrollbar1
             // 
             this.advancedHScrollbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.advancedHScrollbar1.ChannelBorderColor = System.Drawing.Color.Empty;
-            this.advancedHScrollbar1.ChannelColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.advancedHScrollbar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
             this.advancedHScrollbar1.LeftArrow = ((System.Drawing.Image)(resources.GetObject("advancedHScrollbar1.LeftArrow")));
             this.advancedHScrollbar1.Location = new System.Drawing.Point(136, 310);
             this.advancedHScrollbar1.Maximum = 0;
@@ -127,8 +149,8 @@
             this.advancedHScrollbar1.Name = "advancedHScrollbar1";
             this.advancedHScrollbar1.RightArrow = ((System.Drawing.Image)(resources.GetObject("advancedHScrollbar1.RightArrow")));
             this.advancedHScrollbar1.Size = new System.Drawing.Size(269, 24);
-            this.advancedHScrollbar1.TabIndex = 1;
-            this.advancedHScrollbar1.ThumbColor = System.Drawing.Color.Lime;
+            this.advancedHScrollbar1.TabIndex = 8;
+            this.advancedHScrollbar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.advancedHScrollbar1.ThumbLeft = null;
             this.advancedHScrollbar1.ThumbLeftSpan = null;
             this.advancedHScrollbar1.ThumbMiddle = null;
@@ -136,35 +158,13 @@
             this.advancedHScrollbar1.ThumbRight = null;
             this.advancedHScrollbar1.ThumbRightSpan = null;
             // 
-            // advancedVScrollbar1
-            // 
-            this.advancedVScrollbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.advancedVScrollbar1.ChannelBorderColor = System.Drawing.Color.Empty;
-            this.advancedVScrollbar1.ChannelColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.advancedVScrollbar1.DownArrow = ((System.Drawing.Image)(resources.GetObject("advancedVScrollbar1.DownArrow")));
-            this.advancedVScrollbar1.Location = new System.Drawing.Point(401, -1);
-            this.advancedVScrollbar1.Maximum = 0;
-            this.advancedVScrollbar1.Minimum = 0;
-            this.advancedVScrollbar1.Name = "advancedVScrollbar1";
-            this.advancedVScrollbar1.Size = new System.Drawing.Size(24, 312);
-            this.advancedVScrollbar1.TabIndex = 0;
-            this.advancedVScrollbar1.ThumbBottom = null;
-            this.advancedVScrollbar1.ThumbBottomSpan = null;
-            this.advancedVScrollbar1.ThumbColor = System.Drawing.Color.Lime;
-            this.advancedVScrollbar1.ThumbMiddle = null;
-            this.advancedVScrollbar1.ThumbPosition = 0;
-            this.advancedVScrollbar1.ThumbTop = null;
-            this.advancedVScrollbar1.ThumbTopSpan = null;
-            this.advancedVScrollbar1.UpArrow = ((System.Drawing.Image)(resources.GetObject("advancedVScrollbar1.UpArrow")));
-            // 
             // CodeEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.advancedVScrollbar1);
             this.Controls.Add(this.advancedHScrollbar1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.richTextBox3);
@@ -177,13 +177,12 @@
         }
 
         #endregion
-
-        private AdvancedVScrollbar.AdvancedVScrollbar advancedVScrollbar1;
-        private AdvancedHScrollbar.AdvancedHScrollbar advancedHScrollbar1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.TextBox textBox1;
+        private AdvancedVScrollbar.AdvancedVScrollbar advancedVScrollbar1;
+        private AdvancedHScrollbar.AdvancedHScrollbar advancedHScrollbar1;
     }
 }

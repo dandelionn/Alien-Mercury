@@ -59,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\downarrow.png" />
+    <Content Include="Images\downarrowblue.png" />
     <Content Include="Images\uparrow.png" />
+    <Content Include="Images\uparrowblue.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ImageResource.resx">

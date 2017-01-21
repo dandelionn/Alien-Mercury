@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,22 +55,20 @@ namespace ChatBox
             }
         }
 
-        public void PostMessage()
+        public void PostMessage(string editedText)
         {
-            if (_editMessageBox.Text != String.Empty)
+            if (editedText != String.Empty)
             {
                 string profileImageColor = "0xFF0000FF Local user: ";
                 string newLine = "\n";
 
-                _messageBox.Text += profileImageColor + _editMessageBox.Text + newLine;
+                _messageBox.Text += profileImageColor + editedText + newLine;
 
-                int textLength = profileImageColor.Length + _editMessageBox.TextLength + newLine.Length;
+                int textLength = profileImageColor.Length + editedText.Length + newLine.Length;
 
                 ShowImages(textLength);
 
                 _messageBox.SelectionStart = _messageBox.Text.Length;
-
-                _editMessageBox.Text = String.Empty;
             }
         }
     }

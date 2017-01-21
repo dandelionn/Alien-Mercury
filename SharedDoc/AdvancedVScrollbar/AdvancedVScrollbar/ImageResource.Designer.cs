@@ -73,9 +73,29 @@ namespace AdvancedVScrollbar {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap downarrowblue {
+            get {
+                object obj = ResourceManager.GetObject("downarrowblue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap uparrow {
             get {
                 object obj = ResourceManager.GetObject("uparrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uparrowblue {
+            get {
+                object obj = ResourceManager.GetObject("uparrowblue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

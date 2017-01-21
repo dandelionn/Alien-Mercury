@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SemaphoreBar")]
+[assembly: AssemblyTitle("Communication")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SemaphoreBar")]
+[assembly: AssemblyProduct("Communication")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8dbc6d7c-37ef-43c7-a7ae-2dafcddedbba")]
+[assembly: Guid("238dd04c-f2d6-4b12-ad1b-05a1e876f7d5")]
 
 // Version information for an assembly consists of the following four values:
 //

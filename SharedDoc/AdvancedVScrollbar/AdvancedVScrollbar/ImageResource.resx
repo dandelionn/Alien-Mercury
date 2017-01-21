@@ -121,7 +121,13 @@
   <data name="downarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>images\downarrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="downarrowblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>images\downarrowblue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="uparrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>images\uparrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uparrowblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>images\uparrowblue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

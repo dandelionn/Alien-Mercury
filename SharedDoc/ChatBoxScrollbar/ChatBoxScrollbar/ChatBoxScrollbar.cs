@@ -60,8 +60,8 @@ namespace ChatBoxScrollbar
             SetStyle(ControlStyles.DoubleBuffer, true);
 
 
-            UpArrow = ImageResource.uparrow;
-            DownArrow = ImageResource.downarrow;
+            UpArrow = ImageResource.uparrowblue;
+            DownArrow = ImageResource.downarrowblue;
 
 
             //_clickUpDistance = (int)(point.Y - _thumbTopPos - UpArrow.Height);

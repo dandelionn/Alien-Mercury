@@ -39,7 +39,7 @@
             this.richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox.BackColor = System.Drawing.Color.LightCyan;
             this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox.Location = new System.Drawing.Point(0, 0);
             this.richTextBox.Name = "richTextBox";
@@ -57,17 +57,17 @@
             this.advancedVScrollbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.advancedVScrollbar.ChannelBorderColor = System.Drawing.Color.Empty;
-            this.advancedVScrollbar.ChannelColor = System.Drawing.Color.Orange;
+            this.advancedVScrollbar.ChannelColor = System.Drawing.Color.LightSteelBlue;
             this.advancedVScrollbar.DownArrow = ((System.Drawing.Image)(resources.GetObject("advancedVScrollbar.DownArrow")));
             this.advancedVScrollbar.Location = new System.Drawing.Point(406, 0);
             this.advancedVScrollbar.Maximum = 0;
             this.advancedVScrollbar.Minimum = 0;
             this.advancedVScrollbar.Name = "advancedVScrollbar";
             this.advancedVScrollbar.Size = new System.Drawing.Size(19, 371);
-            this.advancedVScrollbar.TabIndex = 0;
+            this.advancedVScrollbar.TabIndex = 3;
             this.advancedVScrollbar.ThumbBottom = null;
             this.advancedVScrollbar.ThumbBottomSpan = null;
-            this.advancedVScrollbar.ThumbColor = System.Drawing.Color.Lime;
+            this.advancedVScrollbar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.advancedVScrollbar.ThumbMiddle = null;
             this.advancedVScrollbar.ThumbPosition = 0;
             this.advancedVScrollbar.ThumbTop = null;
@@ -88,8 +88,7 @@
         }
 
         #endregion
-
-        private ChatBoxScrollbar.ChatBoxScrollbar advancedVScrollbar;
         private System.Windows.Forms.RichTextBox richTextBox;
+        private ChatBoxScrollbar.ChatBoxScrollbar advancedVScrollbar;
     }
 }

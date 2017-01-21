@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -14,13 +15,24 @@ namespace CodeEditor
         public CodeEditor()
         {
             InitializeComponent();
+            PrepareComponents();
 
-            PrepareComponents(); 
+            this.AllowDrop = true;
+            richTextBox1.AllowDrop = true;
+            richTextBox1.DragEnter += new DragEventHandler(this.richTextBox1_DragEnter);
+            richTextBox1.DragDrop += new DragEventHandler(this.richTextBox1_DragDrop);
+            this.DragEnter += new DragEventHandler(this.richTextBox1_DragEnter);
+            this.DragDrop += new DragEventHandler(this.richTextBox1_DragDrop);
         }
 
         public RichTextBox GetEditor()
         {
             return richTextBox1;
+        }
+
+        public List<RichTextBox> GetEditableComponents()
+        {
+            return new List<RichTextBox>() { richTextBox1, richTextBox2, richTextBox3 };
         }
 
         private void PrepareComponents()
@@ -112,6 +124,29 @@ namespace CodeEditor
                 _isScrolling2 = true;
                 _scrollingManager.ScrollAdiacent(richTextBox2, Orientation.Vertical);
                 _isScrolling2 = false;
+            }
+        }
+
+
+        private void richTextBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+        private void richTextBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            object filename = e.Data.GetData("FileDrop");
+            if (filename != null)
+            {
+                var list = filename as string[];
+
+                if (list != null && !string.IsNullOrWhiteSpace(list[0]))
+                {
+                    richTextBox1.Clear();
+                    richTextBox1.LoadFile(list[0], RichTextBoxStreamType.PlainText);
+                }
             }
         }
     }

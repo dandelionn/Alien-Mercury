@@ -73,9 +73,29 @@ namespace AdvancedHScrollbar {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leftarrowblue {
+            get {
+                object obj = ResourceManager.GetObject("leftarrowblue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rightarrow {
             get {
                 object obj = ResourceManager.GetObject("rightarrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rightarrowblue {
+            get {
+                object obj = ResourceManager.GetObject("rightarrowblue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

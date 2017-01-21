@@ -37,7 +37,7 @@
             // 
             this.editMessageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editMessageBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.editMessageBox.BackColor = System.Drawing.Color.LightBlue;
             this.editMessageBox.Location = new System.Drawing.Point(0, 371);
             this.editMessageBox.Name = "editMessageBox";
             this.editMessageBox.Size = new System.Drawing.Size(384, 76);

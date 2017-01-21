@@ -48,14 +48,16 @@
     <Reference Include="CodeEditor">
       <HintPath>..\CodeEditor\bin\Debug\CodeEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\Communication\bin\Debug\Communication.dll</HintPath>
+    </Reference>
     <Reference Include="MessageBox">
       <HintPath>..\ChatBox\bin\Debug\MessageBox.dll</HintPath>
     </Reference>
-    <Reference Include="SemaphoreBar">
-      <HintPath>..\SemaphoreBar\bin\Debug\SemaphoreBar.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,18 +67,67 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TabControlEx">
+      <HintPath>..\TabControlEx\bin\Debug\TabControlEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DatabaseConnector.cs" />
+    <Compile Include="DataTransferManager.cs" />
+    <Compile Include="DialogFormCreator.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="FileOperator.cs" />
+    <Compile Include="FindData.cs" />
+    <Compile Include="FindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDialog.Designer.cs">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FontModifier.cs" />
+    <Compile Include="LoginData.cs" />
+    <Compile Include="LoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginDialog.Designer.cs">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs" />
+    <Compile Include="ReplaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceDialog.Designer.cs">
+      <DependentUpon>ReplaceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemaphoreBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SemaphoreBar.designer.cs">
+      <DependentUpon>SemaphoreBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedDoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SharedDoc.Designer.cs">
       <DependentUpon>SharedDoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SharedDoc.resx">
-      <DependentUpon>SharedDoc.cs</DependentUpon>
+    <Compile Include="TabModifier.cs" />
+    <Compile Include="TextFinder.cs" />
+    <Compile Include="TextEditor.cs" />
+    <EmbeddedResource Include="FindDialog.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginDialog.resx">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplaceDialog.resx">
+      <DependentUpon>ReplaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemaphoreBar.resx">
+      <DependentUpon>SemaphoreBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +139,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SharedDoc.resx">
+      <DependentUpon>SharedDoc.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,6 +154,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\italic64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\bold64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\underline64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\italic48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\bold48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\underline48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\bold32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\bold512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\find128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\find48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\find32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\save-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\saveall256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\open256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\open64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\open32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\open48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\new256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\new64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\find256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\italic512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\underline512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuImages\save48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SemaphoreImages\connect.png" />
+    <Content Include="SemaphoreImages\connectTransparent.png" />
+    <Content Include="SemaphoreImages\Lock.png" />
+    <Content Include="SemaphoreImages\Unlock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
